@@ -1,15 +1,16 @@
 import { Offcanvas, Stack } from "react-bootstrap";
-import { useShoppingCart } from "../context/ShoppingCartContext";
 import { CartItem } from "./CartItem";
 import { formatCurrency } from "../utilities/formatCurrency";
 import storeItems from "../data/items.json";
+import { useContext } from "react";
+import { ShoppingCartContext } from "../context/ShoppingCartContext";
 
 type ShoppingCartProps = {
   isOpen: boolean;
 };
 
 export const ShoppingCart = ({ isOpen }: ShoppingCartProps) => {
-  const { cartItems, closeCart } = useShoppingCart();
+  const { cartItems, closeCart } = useContext(ShoppingCartContext);
 
   return (
     <Offcanvas show={isOpen} onHide={closeCart} placement="end">

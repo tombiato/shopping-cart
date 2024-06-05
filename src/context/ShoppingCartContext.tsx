@@ -1,8 +1,13 @@
-import { useState } from "react";
+import { createContext, useState } from "react";
 import { ShoppingCart } from "../components/ShoppingCart";
 import { useLocalStorage } from "../hooks/useLocalStorage";
-import { ShoppingCartProps, CartItem } from "../types/CartTypes";
-import { ShoppingCartContext } from "./ShoppingCartContext";
+import {
+  ShoppingCartProps,
+  CartItem,
+  ShoppingCartContextType,
+} from "../types/CartTypes";
+
+export const ShoppingCartContext = createContext({} as ShoppingCartContextType);
 
 export const ShoppingCartProvider = ({ children }: ShoppingCartProps) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
