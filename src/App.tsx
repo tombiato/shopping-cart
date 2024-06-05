@@ -4,7 +4,7 @@ import About from "./pages/About.tsx";
 import Home from "./pages/Home.tsx";
 import Store from "./pages/Store.tsx";
 import Navbar from "./components/Navbar.tsx";
-import { ShoppingCartProvider } from "./context/ShoppingCartContext.tsx";
+import { ShoppingCartProvider } from "./context/ShoppingCartProvider.tsx";
 
 function App() {
   return (

@@ -26,7 +26,7 @@ export const ShoppingCart = ({ isOpen }: ShoppingCartProps) => {
               cartItems.reduce((acc, cartItem) => {
                 const item = storeItems.find((item) => item.id === cartItem.id);
                 return acc + (item?.price || 0) * cartItem.quantity;
-              }, 0),
+              }, 0)
             )}`}
           </div>
         </Stack>
